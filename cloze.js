@@ -27,5 +27,3 @@ var firstPresidentCloze = new ClozeFlashcard (
 
 console.log(firstPresidentCloze);
 
-
-
