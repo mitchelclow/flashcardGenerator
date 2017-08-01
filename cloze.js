@@ -1,23 +1,31 @@
-var firstPresident = new BasicCard(
-    "Who was the first president of the United States?", "George Washington");
+// var firstPresidentCloze = new ClozeCard(
+//     "George Washington was the first president of the United States.", "George Washington");
 
-// "Who was the first president of the United States?"
-console.log(firstPresident.front); 
+// // "George Washington"
+// console.log(firstPresidentCloze.cloze); 
 
-// "George Washington"
-console.log(firstPresident.back); 
+// // " ... was the first president of the United States.
+// console.log(firstPresidentCloze.partial); ""
 
-var firstPresidentCloze = new ClozeCard(
-    "George Washington was the first president of the United States.", "George Washington");
+// // "George Washington was the first president of the United States.
+// console.log(firstPresidentCloze.fullText): ""
 
-// "George Washington"
-console.log(firstPresidentCloze.cloze); 
+// // Should throw or log an error because "oops" doesn't appear in "This doesn't work"
+// var brokenCloze = new ClozeCard("This doesn't work", "oops");
 
-// " ... was the first president of the United States.
-console.log(firstPresidentCloze.partial); ""
 
-// "George Washington was the first president of the United States.
-console.log(firstPresidentCloze.fullText): ""
+function ClozeFlashcard(normalText, stringToReplace)
+{
+  this.normalText = normalText;
+  this.clozeText = normalText.replace(stringToReplace, "...");
+}
 
-// Should throw or log an error because "oops" doesn't appear in "This doesn't work"
-var brokenCloze = new ClozeCard("This doesn't work", "oops");
+var firstPresidentCloze = new ClozeFlashcard (
+
+	"Blue is the color of the sky." , "Blue"
+	);
+
+console.log(firstPresidentCloze);
+
+
+
