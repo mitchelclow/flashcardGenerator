@@ -9,3 +9,5 @@ var firstCard = new BasicFlashcard("Who was the first President of the United St
 
 console.log(firstCard.front);
 console.log(firstCard.back);
+
+module.exports = BasicFlashcard;
